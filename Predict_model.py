@@ -19,3 +19,5 @@ def model_predict(sequences):
     predict = np.int32(predict > 0.5)
     return predict
 
+if __name__ == '__main__':
+    print('test')
