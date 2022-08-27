@@ -1,16 +1,16 @@
 # MultiScale_CNN_4mCPred
-Abstract：
-1.This project provides three py files, Framework_model, Predict_model and Data_generate respectively.
-2.With the Framework_model.py file, the structure of the model can be seen and training examples are provided.
-3.The Predict_model.py file shows the runs of our final model on the test set and the predicted results.
-4.The Data_generate.py file shows how we process the source dataset and stores the pre-processed data in the data_processed folder.
-5.The folder dataset holds the most original dataset
-6.The folder model_weights holds our model weights
+Abstract：  
+1.This project provides three py files, Framework_model, Predict_model and Data_generate respectively.  
+2.With the Framework_model.py file, the structure of the model can be seen and training examples are provided.  
+3.The Predict_model.py file shows the runs of our final model on the test set and the predicted results.  
+4.The Data_generate.py file shows how we process the source dataset and stores the pre-processed data in the data_processed folder.  
+5.The folder dataset holds the most original dataset.  
+6.The folder model_weights holds our model weights.  
 
 # Requirements
-Python3
-Tensorflow>=2.0
-numpy==1.18.5
+Python3  
+Tensorflow>=2.0  
+numpy==1.18.5  
 
 # Guidance
 
