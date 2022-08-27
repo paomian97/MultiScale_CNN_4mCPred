@@ -59,7 +59,7 @@ def Load_test_negative():
         for line in file:
             seq, label = line.split(',')
             seqs.append(seq)
-            labels.append(label)
+            labels.append(np.int32(label))
         np.save(r'./data_processed/test_seq_negative', seqs)
         np.save(r'./data_processed/test_label_negative', labels)
 
