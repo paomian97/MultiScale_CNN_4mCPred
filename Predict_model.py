@@ -20,4 +20,16 @@ def model_predict(sequences):
     return predict
 
 if __name__ == '__main__':
-    print('test')
+    print('Load test set data and make predictions:')
+
+    test_positive_seq = np.load(r'./data_processed/test_seq_positive.npy')
+    test_negative_seq = np.load(r'./data_processed/test_seq_negative.npy')
+    test_label_positive = np.load(r'./data_processed/test_label_positive.npy')
+    test_label_negative = np.load(r'./data_processed/test_label_negative.npy')
+
+    test_data = np.concatenate([test_positive_seq, test_negative_seq], axis=0)
+    test_label = np.concatenate([test_label_positive, test_label_negative], axis=0)
+
+    predict_outcome = model_predict(test_data)
+
+    print('Accuracy=', accuracy_score(test_label, predict_outcome))
