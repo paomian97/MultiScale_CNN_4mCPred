@@ -22,7 +22,8 @@ Run the Predict_model.py file by:  Python Predict_model.py
 
 ## If you want to train the model  
 ### Step1:  
-Run the data_generate.py file by： python Data_generate.py
+Run the data_generate.py file by:  
+python Data_generate.py  
 ### Step2:  
 You can change the code in Framework_model.py as appropriate, or you can run it directly.  
 python Framework_model.py
