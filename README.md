@@ -12,17 +12,17 @@ Python3
 Tensorflow>=2.0  
 numpy==1.18.5  
 
-# Guidance
+# Guidance  
 
-## Show model test set results
-### Step1:
+## Show model test set results  
+### Step1:  
 Run the data_generate.py file by： Python Data_generate.py
-### Step2:
-Run the Predict_model.py file by: Python Predict_model.py
+### Step2:  
+Run the Predict_model.py file by:  Python Predict_model.py
 
-## If you want to train the model
-### Step1:
+## If you want to train the model  
+### Step1:  
 Run the data_generate.py file by： python Data_generate.py
-### Step2:
-You can change the code in Framework_model.py as appropriate, or you can run it directly.
+### Step2:  
+You can change the code in Framework_model.py as appropriate, or you can run it directly.  
 python Framework_model.py
