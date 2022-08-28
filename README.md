@@ -12,7 +12,6 @@ This project provides a core code for mouse DNA N-4 methylation site prediction.
 * Python3  
 * Tensorflow>=2.0  
 * numpy==1.18.5 
-* sklearn
 
 
 # Guidance  
