@@ -1,5 +1,6 @@
 # MultiScale_CNN_4mCPred
-Abstract：  
+## Abstract  
+This project provides a core code for mouse DNA N-4 methylation site prediction. As you can see, the project contains three py files and three folders. The following describes the meaning of each file one by one. 
 1.This project provides three py files, Framework_model, Predict_model and Data_generate respectively.  
 2.With the Framework_model.py file, the structure of the model can be seen and training examples are provided.  
 3.The Predict_model.py file shows the runs of our final model on the test set and the predicted results.  
@@ -8,9 +9,11 @@ Abstract：
 6.The folder model_weights holds our model weights.  
 
 # Requirements
-Python3  
-Tensorflow>=2.0  
-numpy==1.18.5  
+* Python3  
+* Tensorflow>=2.0  
+* numpy==1.18.5 
+* sklearn
+
 
 # Guidance  
 
