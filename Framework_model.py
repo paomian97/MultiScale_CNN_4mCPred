@@ -50,3 +50,15 @@ def train_model(train_x, train_y):
     model.fit(x=train_feature, y=train_y, batch_size=8, epoch=100)
 
     #model.save('./model_save')
+    
+if __name__ == '__main__':
+    train_seq_positive = np.load(r'./data_processed/train_seq_positive.npy')
+    train_seq_negative = np.load(r'./data_processed/train_seq_negative.npy')
+    train_label_positive = np.load(r'./data_processed/train_label_positive.npy')
+    train_label_negative = np.load(r'./data_processed/train_label_negative.npy')
+    
+    
+    train_data = np.concatenate([train_seq_positive, train_seq_negative], axis=0)
+    train_label = np.concatenate([train_label_positive, train_label_negative], axis=0)
+    
+    train_model(train_data, train_label)
