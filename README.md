@@ -5,7 +5,7 @@ This project provides a core code for mouse DNA N-4 methylation site prediction.
 2.The Predict_model.py file shows the runs of our final model on the test set and the predicted results.  
 3.The Data_generate.py file shows how we process the source dataset and stores the pre-processed data in the data_processed folder.  
 4.The folder dataset holds the most original dataset.  
-5.The folder model_weights holds our model weights.
+5.The folder model_weights holds our model weights.  
 6.The folder data_processed holds our preprocessed data.  
 
 # Requirements
