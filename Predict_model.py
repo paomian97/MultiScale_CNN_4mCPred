@@ -2,6 +2,31 @@ import tensorflow as tf
 import numpy as np
 from sklearn.metrics import accuracy_score
 
+def sn_sp_acc_mcc(true_label, predict_label, pos_label=1):
+    import math
+    pos_num = np.sum(true_label == pos_label)
+    print('pos_num=', pos_num)
+    neg_num = true_label.shape[0] - pos_num
+    print('neg_num=', neg_num)
+    tp = np.sum((true_label == pos_label) & (predict_label == pos_label))
+    print('tp=', tp)
+    tn = np.sum(true_label == predict_label) - tp
+    print('tn=', tn)
+    sn = tp / pos_num
+    sp = tn / neg_num
+    acc = (tp + tn) / (pos_num + neg_num)
+    fn = pos_num - tp
+    fp = neg_num - tn
+    print('fn=', fn)
+    print('fp=', fp)
+
+    tp = np.array(tp, dtype=np.float64)
+    tn = np.array(tn, dtype=np.float64)
+    fp = np.array(fp, dtype=np.float64)
+    fn = np.array(fn, dtype=np.float64)
+    mcc = (tp * tn - fp * fn) / (np.sqrt((tp + fn) * (tp + fp) * (tn + fp) * (tn + fn)))
+    return sn, sp, acc, mcc
+
 def numerical_transform(sequences):
     unit = [x for x in 'AGCT']
     Dict = {Key:value for value, Key in enumerate(unit)}
@@ -33,4 +58,8 @@ if __name__ == '__main__':
 
     predict_outcome = model_predict(test_data)
 
-    print('Accuracy=', accuracy_score(test_label, predict_outcome))
+    sn, sp, acc, mcc = sn_sp_acc_mcc(test_label, predict_outcome)
+    print('Accuracy = ', acc)
+    print('Sensitivity = ', sn)
+    print('Specificity = ', sp)
+    print('Matthews correlation coefficient = ', mcc)
